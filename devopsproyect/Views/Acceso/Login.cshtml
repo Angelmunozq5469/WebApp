@@ -1,0 +1,179 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <title>Clinica CES - Cirugia</title>
+    
+
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+
+    <style>
+      body,
+      html {
+      background-color: #142c4c;
+      background-image: url('https://scontent.feoh1-1.fna.fbcdn.net/v/t1.6435-9/119469494_3436929962995948_4897274034206997232_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=973b4a&_nc_ohc=B5D_m7aFgXMAX9FNfZL&_nc_ht=scontent.feoh1-1.fna&oh=00_AfD4x4gcFednwe1Nb3LmtWpKjMiYlVzgNSHLa8UCHMFd8A&oe=64554EED');
+      background-size:90%;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+		
+      }
+
+      .user_card {
+		    background-color: #142c4c;
+        width: 500px;
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .brand_logo_container {
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .form_container {
+        margin-top: 1.5rem;
+      }
+
+      .login_btn {
+        width: 100%;
+        background: #007bff;
+        color: white !important;
+        border-radius: 0.5rem;
+        text-align: center;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .login_btn:focus {
+        box-shadow: none !important;
+        outline: none !important;
+      }
+
+      .login_container {
+        padding: 0 2rem;
+      }
+
+      .alert-danger {
+        background-color: #142c4c;
+        border-color: #142c4c;
+        color: #721c24;
+        text-align: center;
+        font-size: medium;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        padding: 0.75rem;
+      }
+      .login-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      }
+
+      .input-group-text {
+        background: #007bff !important;
+        color: white !important;
+        border: 0 !important;
+        border-radius: 0.25rem 0 0 0.25rem !important;
+      }
+
+      .input_user,
+      .input_pass:focus {
+        box-shadow: none !important;
+        outline: none !
+	}
+	.custom-control-label {
+  		color: white;
+	}
+	.login_btn:hover {
+    background-color: green;
+  }
+
+
+
+	</style>
+
+
+</head>
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="https://clinicaces.edu.co/wp-content/uploads/2022/03/logo-vertical-clinica-CES.png" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+
+				
+					<form action="@Url.Action("Login","Acceso")" method="post">
+
+
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input type="text" name="Correo" maxlength="30" class="form-control input_user" value="" placeholder="Correo">
+							
+
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="Clave" maxlength="30" class="form-control input_pass" value="" placeholder="Contraseña">
+						</div>
+						<div class="form-group">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customControlInline">
+								<label class="custom-control-label" for="customControlInline">Recuerdame</label>
+							</div>
+						<div id="alert-container">
+							<div class="alert alert-danger">@ViewData["Mensaje"]</div>
+						</div>
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="submit" name="button" class="btn login_btn">Login</button>
+				   </div>
+					</form>
+				</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
+

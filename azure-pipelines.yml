@@ -1,0 +1,33 @@
+pool:
+  name: Default
+
+trigger:
+- development
+
+resources:
+- repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'bc47a24c-3e3c-459f-93ff-84dbb8fbdcc0'
+  imageRepository: 'devopscourse'
+  containerRegistry: 'dockerimagebuilder.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  tag: '$(Build.BuildId)'
+
+
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      name: Default
+      
+    steps:
+    - script: |
+        docker buildx build --platform linux/amd64 -t $(containerRegistry)/$(imageRepository):$(tag) .
+        docker push $(containerRegistry)/$(imageRepository):$(tag)
+      displayName: Build and push an image to container registry
+

@@ -1,0 +1,20 @@
+pool:
+  name: Default
+
+variables:
+    # Container registry service connection established during pipeline creation
+    dockerRegistryServiceConnection: serviciodeprueba
+    imageRepository: alyxw/alace-cs
+    containerRegistry: containerdeprueba
+    dockerfilePath: 'Dockerfile'
+    tag: 'latest'
+
+
+steps:
+
+- task: Azurewebappcontainer@1
+  inputs:
+    azureSubscription: 'devops-appsetrvice'
+    appName: 'pruebatesteoamd'
+    containers: $(containerRegistry)/$(imageRepository):$(tag)
+

@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Clinica Ces</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        body{
+            background: #fff;
+
+
+        }
+
+        .wrapper{
+            display: flex;
+            position: relative;
+        }
+
+        .wrapper .sidebar{
+            position: fixed;
+            width: 200px;
+            height: 5000px;
+
+            background: #142c4c;
+            padding: 100px 0;
+        }
+
+        .wrapper .sidebar h2{
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+
+
+        }
+
+        .wrapper .sidebar ul li{
+
+            align-items: center;
+
+
+        }
+
+        .wrapper .sidebar ul li a{
+            margin: 100px;
+            
+            color: aliceblue;
+            display: block;
+        }
+
+        .wrapper .sidebar ul li:hover {
+
+            color: black;
+
+        }
+
+
+        .bi-calendar2-date {
+            font-size: 50px; /* adjust the size to your preference */
+            margin-left: 60%;
+            margin-right: 100%;
+            align-items: center;
+
+
+        }
+
+        .bi-binoculars-fill{
+            font-size: 50px;
+            margin-right: 10;
+            margin-left: auto;
+
+        }
+
+        .bi-box-arrow-left{
+            font-size: 50px;
+            margin-right: 10;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav><!-- Add this opening nav tag here -->
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul class="text-center">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-calendar2-date rounded-circle p-2" style="background-color: #007BFF; color: white;" title="Programacion"></i>
+                    </a>
+                    <li><a asp-area="" asp-controller="Deployment" asp-action="mostrarcitas">
+                    <i class="bi bi-binoculars-fill rounded-circle p-2" style="background-color: #007BFF; color: white;" title="Programaciones"></i>
+                    </a>
+                    <li><a asp-area="" asp-controller="Home" asp-action="CerrarSesion">
+                    <i class="bi bi-box-arrow-left rounded-circle p-2" style="background-color: #007BFF; color: white;"title="Salida"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid bcontent">
+        @RenderBody()
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/bootstrap-icons.js"></script>
+    <!-- Add the Bootstrap Icons JS file after the Bootstrap JS file -->
+</body>
+</html>
+

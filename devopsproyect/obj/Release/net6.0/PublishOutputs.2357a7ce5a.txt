@@ -1,0 +1,7 @@
+/Users/angelemilio/Desktop/webappproyecto/devopsproyect/Publish/devopsproyect
+/Users/angelemilio/Desktop/webappproyecto/devopsproyect/Publish/appsettings.Development.json
+/Users/angelemilio/Desktop/webappproyecto/devopsproyect/Publish/appsettings.json
+/Users/angelemilio/Desktop/webappproyecto/devopsproyect/Publish/devopsproyect.dll
+/Users/angelemilio/Desktop/webappproyecto/devopsproyect/Publish/devopsproyect.deps.json
+/Users/angelemilio/Desktop/webappproyecto/devopsproyect/Publish/devopsproyect.runtimeconfig.json
+/Users/angelemilio/Desktop/webappproyecto/devopsproyect/Publish/devopsproyect.pdb

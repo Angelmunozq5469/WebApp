@@ -1,0 +1,165 @@
+@model Agendamiento
+<style>
+
+    body{
+    background-color: #142c4c;
+  }
+    .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.border {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.row {
+  margin: 0;
+}
+
+.text-primary {
+  color: white;
+  font-weight: bold;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-select:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-primary:focus,
+.btn-secondary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-primary.active,
+.btn-secondary.active {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-primary:active:focus,
+.btn-secondary:active:focus,
+.btn-primary.active:focus,
+.btn-secondary.active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+label[for="Nombre"],
+label[for="Correo"],
+label[for="Numero"],
+label[for="Fecha"],
+label[for="Horario"],
+label[for="Especialidad"] {
+  color: #fff;
+}
+
+</style>
+<div class="container">
+    <form method="post" asp-action="Delete">
+        <div class="border p-3 mt-4">
+            <div class="row pb-2 d-flex justify-content-center align-items-center">
+                <h2 class="text-primary">Eliminar Agendamiento</h2>
+                <hr />
+            </div>
+
+            <div class="mb-3">
+                <input type="hidden" asp-for="IdAgendamiento" />
+                <label asp-for="Nombre"></label>
+                <input asp-for="Nombre" disabled class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <input type="hidden" asp-for="IdAgendamiento" />
+                <label asp-for="Correo"></label>
+                <input asp-for="Correo" disabled class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <input type="hidden" asp-for="IdAgendamiento" />
+                <label asp-for="Numero"></label>
+                <input asp-for="Numero" disabled class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <input type="hidden" asp-for="IdAgendamiento" />
+                <label asp-for="Fecha"></label>
+                <input asp-for="Fecha" disabled class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <input type="hidden" asp-for="IdAgendamiento" />
+                <label asp-for="Horario"></label>
+                <input asp-for="Horario" disabled class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <input type="hidden" asp-for="IdAgendamiento" />
+                <label asp-for="Especialidad"></label>
+                <input asp-for="Especialidad" disabled class="form-control"/>
+            </div>
+            <button type="submit" class="btn btn-danger" style="width: 150px;">Eliminar</button>
+            <a asp-controller="Deployment" asp-action="mostrarcitas" class="btn btn-secondary" style="width: 150px;">
+                Volver
+            </a>
+        </div>
+    </form>
+</div>
